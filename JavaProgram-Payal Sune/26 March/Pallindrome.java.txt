@@ -1,0 +1,25 @@
+package javaprogramme;
+import java.util.Scanner;
+public class Palindrome {
+
+	public static void main(String[] args) {
+		System.out.println("Enter the number:");
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		int reversednum=0;
+		int remainder;
+		int originalnum=num;
+		while (num != 0) {
+		      remainder = num % 10;
+		      reversednum = reversednum * 10 + remainder;
+		      num /= 10;
+		    }
+		    
+		    if (originalnum == reversednum) {
+		      System.out.println(originalnum + " is Palindrome.");
+		    }
+		    else {
+		      System.out.println(originalnum + " is not Palindrome.");
+		    }
+		  }
+		}

@@ -1,0 +1,41 @@
+package javaprogramme;
+
+public class SortArray {
+
+	public static void main(String[] args) {
+	int array[]= {25,5,16,2,3,0,1,14};
+	sortfirsthalfAscending(array);
+	sortsecondhalfdesending(array);
+	System.out.println("sorted array is:");
+	for(int num:array) {
+		System.out.println(num+"");
+	}
+	}
+	public static void sortfirsthalfAscending(int[] array) {
+		for(int i=0;i<array.length/2-1;i++){
+			for(int j=i+1;j<array.length/2;j++) {
+				if(array[i]>array[j]) {
+					int temp=array[i];
+					array[i]=array[j];
+					array[j]=temp;
+				}
+			}
+		}
+
+	}
+	public static void sortsecondhalfdesending(int[] array) {
+		for(int i=array.length/2;i<array.length-1;i++) {
+			for(int j=i+1;j<array.length;j++) {
+				if(array[i]<array[j]) {
+					int temp=array[i];
+					array[i]=array[j];
+					array[j]=temp;
+					
+				}
+			}
+			
+		}
+	}
+	
+
+}

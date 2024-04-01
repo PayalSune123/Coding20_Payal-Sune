@@ -1,0 +1,37 @@
+package javaprogramme;
+
+public class WordRepeatedletter {
+public static String findWordMostRepeatedLetters(String input) {
+	        String[] words = input.split("\\s+");
+	        String wordWithMostRepeatedLetters = null;
+	        int maxRepeatedLetters = 0;
+
+	        for (String word : words) {
+	            int[] frequency = new int[256]; 
+
+	            for (char ch : word.toCharArray()) {
+	                frequency[ch]++;
+	            }
+
+	            int repeatedLetters = 0;
+	            for (int count : frequency) {
+	                if (count > 1) {
+	                    repeatedLetters += count;
+	                }
+	            }
+
+	            if (repeatedLetters > maxRepeatedLetters) {
+	                maxRepeatedLetters = repeatedLetters;
+	                wordWithMostRepeatedLetters = word;
+	            }
+	        }
+
+	        return (wordWithMostRepeatedLetters != null) ? wordWithMostRepeatedLetters : "-1";
+	    }
+
+	    public static void main(String[] args) {
+	        String input = "hello world bookkeeper"";
+	        String result = findWordMostRepeatedLetters(input);
+	        System.out.println("Word with most repeated letters: " + result);
+	    }
+	}

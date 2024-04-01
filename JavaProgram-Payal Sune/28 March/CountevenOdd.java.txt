@@ -1,0 +1,22 @@
+package javaprogramme;
+
+public class CountoddEven {
+
+	public static void main(String[] args) {
+		int a[]	= {2,4,6,8,1,3,5,9};
+		int count=0;
+		int ctr=0;
+		for(int i=0;i<a.length;i++)
+		{
+		if(a[i]%2==0) {
+			count++;
+		}
+		else {
+			ctr++;
+		}
+		}
+		System.out.printf("\nNumber of even elements in the array:%d" ,count);
+        System.out.printf("\nNumber of odd elements in the array:%d",ctr);
+        System.out.printf("\n");
+}
+	}
